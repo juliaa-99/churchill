@@ -1,0 +1,39 @@
+// FONTS
+$font: 'Montserrat', sans-serif;
+// $font2: 'Roboto', sans-serif;
+
+// PATH TO IMAGES
+$imgpath : "../img";
+
+// responsive breackpoints
+$w_mob_s:  550px;
+$w_mob: 768px;
+$w_mob_tb:    991px;
+$w_tab:    1200px;
+$w_laptop: 1500px;
+
+$w_min:    320px;
+$w_max:    2560px;
+
+
+html {
+
+    --doc-padding: 40px;
+    --doc-font-size: 16px;
+
+    --cols      : 12;
+    --gutter    : 20px;
+    --column    : calc( ( 100% - ( var(--gutter) * (var(--cols) - 1) ) ) / 12 );
+    --w-content : calc(1420px + var(--doc-padding)*2);
+
+
+    // colors of project
+
+    --c-white       : #ffffff;
+    --c-black       : #1E1E1E;
+
+    --ye            : #FFCE7B;
+    --gray          : #3b3b3a;
+    --red           : #7A1120;
+
+}

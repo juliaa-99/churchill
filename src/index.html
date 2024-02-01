@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+//= utilities/head.html
+<body>
+	//= sections/header.html
+
+	//= sections/banner.html
+	//= sections/about.html
+	//= sections/profit.html
+	//= sections/franchise.html
+
+	//= sections/order.html
+	//= sections/descrip.html
+	//= sections/range.html
+	//= sections/line.html
+	//= sections/program.html
+	//= sections/slogan.html
+	//= sections/total.html
+	//= sections/start.html
+	//= sections/contact.html
+	//= sections/faq.html
+
+	//= sections/dialogs.html
+	//= utilities/scripts.html
+
+	<script>
+      function onEntry(entry) {
+          entry.forEach(change => {
+              if (change.isIntersecting) {
+                  change.target.classList.add('element-show');
+              }
+          });
+      }
+      let options = { threshold: [0.5] };
+      let observer = new IntersectionObserver(onEntry, options);
+      let elements = document.querySelectorAll('.element-animation, .element-animation_tw');
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
+	</script>
+</body>
+</html>

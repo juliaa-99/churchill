@@ -1,0 +1,130 @@
+.slogan {
+	overflow: hidden;
+	color: var(--c-white);
+
+	h2 {
+		span {
+			color: var(--ye);
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		overflow: hidden;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: flex-end;
+
+		position: relative;
+	}
+
+	&__img {
+		width: 445px;
+		height: 445px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		@media (max-width: $w_mob_tb) {
+			width: 250px;
+			height: 250px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: relative;
+			z-index: 2;
+
+			overflow: hidden;
+			border-radius: 100%;
+		}
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			display: block;
+
+			position: absolute;
+			top: -30px;
+			left: -50px;
+			z-index: 1;
+
+			border: 3px solid var(--ye);
+			border-radius: 100%;
+			transition: 0.3s;
+		}
+
+		&:hover {
+			&:after {
+				top: -3px;
+				left: -2px;
+			}
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		min-height: 445px;
+		width: 80%;
+
+		position: relative;
+		z-index: 3;
+
+		@media (max-width: $w_mob_tb) {
+			width: 100%;
+			padding: 125px 0 30px;
+			min-height: inherit;
+
+			h2 {
+				width: 100%;
+			}
+		}
+	}
+
+	&__text {
+		width: 70%;
+		margin-top: 70px;
+
+		text-transform: uppercase;
+		font-size: 23px;
+		line-height: 1.25;
+
+		@media (max-width: $w_mob_tb) {
+			width: 100%;
+			font-size: 18px;
+			margin-top: 30px;
+		}
+
+		span {
+			color: var(--ye);
+		}
+	}
+}
